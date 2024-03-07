@@ -41,7 +41,7 @@ class EmailRegistrationController extends GetxController {
           style: TextStyle(color: kPrimaryBlack),
         ),
       );
-      Get.toNamed(RouteName.pdfListScreen);
+      Get.toNamed(RouteName.pdfPreview);
       update();
       log(signUpResult.user.toString());
     } catch (e) {

@@ -34,7 +34,7 @@ class GoogleLoginController extends GetxController {
       return error;
     }).then((signInResult) {
       if (auth.currentUser != null) {
-        Get.toNamed(RouteName.pdfListScreen);
+        Get.toNamed(RouteName.pdfView);
       }
     });
   }

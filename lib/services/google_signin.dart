@@ -19,7 +19,7 @@ class GoogleSignInService extends GetxController{
       idToken: googleSignInAuth?.idToken,
     );
     if (auth.currentUser != null){
-      Get.toNamed(RouteName.pdfListScreen);
+      Get.toNamed(RouteName.pdfPreview);
     }
     return await FirebaseAuth.instance.signInWithCredential(credential);
   }

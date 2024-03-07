@@ -4,6 +4,7 @@ import 'package:quick_read/constants/colours.dart';
 import 'package:quick_read/constants/dismiss_keyboard.dart';
 import 'package:quick_read/constants/strings.dart';
 import 'package:quick_read/screens/login/email_login_controller.dart';
+import 'package:quick_read/services/google_signin.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -11,6 +12,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final prov = EmailLoginController();
+    final googleProv = GoogleSignInService();
     return Scaffold(
       backgroundColor: kPrimaryWhite,
       body: kUnfocus(
@@ -49,7 +51,9 @@ class LoginScreen extends StatelessWidget {
                           )),
                       SizedBox(width: 20.w),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () async{
+                            await googleProv.signInWithGoogle();
+                          },
                           style:
                               TextButton.styleFrom(backgroundColor: kIconRed),
                           child: const Text(

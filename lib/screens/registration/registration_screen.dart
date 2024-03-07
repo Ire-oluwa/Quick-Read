@@ -5,7 +5,6 @@ import 'package:quick_read/constants/colours.dart';
 import 'package:quick_read/constants/dismiss_keyboard.dart';
 import 'package:quick_read/constants/strings.dart';
 import 'package:quick_read/routes/route_names.dart';
-import 'package:quick_read/screens/login/google_login_controller.dart';
 import 'package:quick_read/screens/registration/email_registration.dart';
 import 'package:quick_read/services/email_authentication.dart';
 import 'package:quick_read/services/google_signin.dart';

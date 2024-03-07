@@ -39,7 +39,7 @@ class EmailLoginController extends GetxController {
           style: TextStyle(color: kPrimaryBlack),
         ),
       );
-      Get.toNamed(RouteName.pdfListScreen);
+      Get.toNamed(RouteName.pdfPreview);
       update();
       log(signInResult.user.toString());
     } catch (e) {
